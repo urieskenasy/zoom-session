@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+  }
+
+  :root {
+      font-size: 62.5%;
+}
+
+body {
+      font-family: 'Fira Sans', sans-serif;
+      width: 100vw;
+      height: 100vh;
+}
+
+header {
+      width: 100%;
+      height: 15rem;
+      background-color: #222222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+header > h1 {
+      font-size: 5rem;
+      color: white;
+}
+
+/*********** MAin **********/
+
+main {
+      width: 100%;
+      height: calc(100vh - 26.5rem);
+      background-color: #282B28;
+      display: flex;
+      justify-content: center;
+}
+
+/******* MainLego sec ******/
+
+.MainLego {
+      width: 85%;
+      padding: 5rem 0 2.3rem;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     grid-template-areas: "DS H7 CP"
+                          "H4L DW CN"
+     ;
+     gap: 1.5rem;
+}
+
+.item {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 2rem;
+
+      display: flex;
+      align-items: flex-end;
+}
+
+.item:hover {
+      cursor: pointer;
+}
+
+.item > h3 {
+      color: white;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.26);
+      padding: 10px;
+      margin: 0 0 0.9rem 0.9rem;
+      border-radius: 0.5rem;
+}
+
+.devstar {
+      grid-area: DS;
+      background-image: url(./assets/student-1.jpeg);
+}
+
+.hacker7 {
+      grid-area: H7;
+      background-image: url(./assets/student-2.jpeg);  
+}
+
+.csspro {
+      grid-area: CP;
+      background-image: url(./assets/student-3.jpeg) 
+}
+
+.html4life {
+      grid-area: H4L;
+      background-image: url(./assets/student-4.jpeg) 
+}
+
+.drweb {
+      grid-area: DW;
+      background-image: url(./assets/student-5.jpeg) 
+}
+
+.codeninja {
+      grid-area: CN;
+      background-image: url(./assets/student-6.jpeg)
+}
+
+/********** FOOTER **********/
+
+footer {
+      width: 100%;
+      height: 11.5rem;
+      background-color: #222222;
+}
+
+.F-Sec {
+      width: 85%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.footer-Div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+}
+
+
+.footer-Div > p {
+      color: white;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-align: center;
+      transition: 0.4s;
+}
+
+.footer-Div > p:hover {
+      cursor: pointer;
+      color: red;
+      font-size: 3rem;
+}
+
+.footer-Div > i {
+      color: white;
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 0.2rem;
+}
+
+.Leave-Btn > button{
+      color: white;
+      background-color: red;
+      font-size: 2rem;
+      padding: 10px;
+      border: none;
+      border-radius: 0.8rem;
+      transition: 0.4s;
+}
+
+.Leave-Btn > button:hover {
+      border: solid 0.1rem red;
+      background-color: white;
+      color: red;
+      cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+
+      :root {
+            font-size: 35%;
+      }
+      
+      .MainLego {
+           grid-template-columns: repeat(2, 1fr);
+           grid-template-rows: repeat(3, 1fr);
+           grid-template-areas: "DS H7" 
+                                "H4L CP"
+                                "DW CN"
+           ;
+      }
+      
+}
